@@ -1,0 +1,48 @@
+### 场景1：用户登录判断
+
+### 1.1 用户登录
+POST http://localhost:10001/bitmap/userLogin/10086
+Content-Type: application/json
+
+### 1.2 用户是否登录
+GET http://localhost:10001/bitmap/userIsLogin/10086
+Accept: application/json
+
+### 1.3 用户登出
+POST http://localhost:10001/bitmap/userLogout/10086
+Accept: application/json
+
+
+### 场景2：用户每月签到情况
+
+### 2.1 用户签到
+POST http://localhost:10001/bitmap/userSign/10086
+Content-Type: application/json
+
+{
+  "signDateTime": "2024-06-01 10:00:00"
+}
+
+### 2.2 用户是否签到  sign:10086:202406
+POST http://localhost:10001/bitmap/userIsSign/10086
+Content-Type: application/json
+
+{
+  "signDateTime": "2024-06-01 10:00:00"
+}
+
+### 2.3 统计用户当月签到总天数
+GET http://localhost:10001/bitmap/countUserSign/10086/202406
+Accept: application/json
+
+### 2.4 用户签到
+POST http://localhost:10001/bitmap/userSign/10086
+Content-Type: application/json
+
+{
+  "signDateTime": "2024-06-28 10:00:00"
+}
+
+### 2.3 统计用户当月签到总天数
+GET http://localhost:10001/bitmap/countUserSign/10086/202406
+Accept: application/json

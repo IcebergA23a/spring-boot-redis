@@ -1,0 +1,36 @@
+### 场景1：游戏排行榜
+
+### 1.1 新增玩家排行榜信息
+POST http://localhost:10001/sortedSet/addPlayers
+Content-Type: application/json
+
+[
+  {
+    "playerId": 1,
+    "playerScore": "2500",
+    "playerScoreTime": "2025-01-15 10:00:00"
+  },
+  {
+    "playerId": 2,
+    "playerScore": "500",
+    "playerScoreTime": "2025-01-15 10:00:11"
+  },
+  {
+    "playerId": 3,
+    "playerScore": "500",
+    "playerScoreTime": "2025-01-15 10:00:00"
+  },
+  {
+    "playerId": 4,
+    "playerScore": "987770",
+    "playerScoreTime": "2025-01-15 10:00:00"
+  }
+]
+
+### 1.2 获取Top3玩家排行榜信息
+GET http://localhost:10001/sortedSet/getTop3Player
+Accept: application/json
+
+### 1.3 获取指定玩家排名
+GET http://localhost:10001/sortedSet/getPlayerRank/2
+Accept: application/json
