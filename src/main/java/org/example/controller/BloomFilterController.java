@@ -7,7 +7,8 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @Desc TODO
+ * @Desc BloomFilter
+ * @Desc  https://redisson.pro/docs/data-and-services/objects/#bloom-filter
  * @Author bingshan
  * @Date 2025/12/12 10:59
  */
