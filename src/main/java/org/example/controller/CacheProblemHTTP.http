@@ -1,0 +1,8 @@
+### 场景1：缓存击穿
+
+GET http://localhost:10001/cacheProblem/cacheBreakdown/aa
+Accept: application/json
+
+### 场景2：缓存穿透
+GET http://localhost:10001/cacheProblem/cachePenetration/bb
+Accept: application/json
