@@ -1,0 +1,16 @@
+## 场景：共同好友
+### Send POST request with Alice's good friends
+POST  http://localhost:10001/sets/addGoodFriend?userName=Alice
+Content-Type: application/json
+
+["Bob", "Charlie", "David"]
+
+### Send POST request with
+POST  http://localhost:10001/sets/addGoodFriend?userName=Eve
+Content-Type: application/json
+
+["David", "Frank", "Grace"]
+
+### Get common good friends between Alice and Eve
+GET  http://localhost:10001/sets/getCommonFriends?userName1=Alice&userName2=Eve
+Content-Type: application/json
