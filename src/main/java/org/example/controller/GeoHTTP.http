@@ -1,0 +1,15 @@
+### GET request with addGeo
+GET http://localhost:10001/geo/addGeo?geoKey=girl:localtion&longitude=13.361389&latitude=38.115556&member=Alice
+Accept: application/json
+
+### GET request with addGeo
+GET http://localhost:10001/geo/addGeo?geoKey=girl:localtion&longitude=15.087269&latitude=37.502669&member=Eve
+Accept: application/json
+
+### GET request with removeGeo
+GET http://localhost:10001/geo/removeGeo?geoKey=girl:localtion&member=Eve
+Accept: application/json
+
+### GET request with searchGeo
+GET http://localhost:10001/geo/searchGeo?geoKey=girl:localtion&longitude=15.087269&latitude=37.502669&radius=1000&unit=KILOMETERS
+Accept: application/json
