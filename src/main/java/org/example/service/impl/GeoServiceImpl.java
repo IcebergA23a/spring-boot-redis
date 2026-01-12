@@ -17,6 +17,15 @@ public class GeoServiceImpl implements GeoService {
 
     @Autowired
     private RedisTemplate redisTemplate;
+
+    /**
+     * 添加地理信息
+     * @param geoKey
+     * @param longitude
+     * @param latitude
+     * @param member
+     * @return
+     */
     @Override
     public Long addGeo(String geoKey, double longitude, double latitude, String member) {
         Point point = new Point(longitude, latitude);
@@ -25,11 +34,26 @@ public class GeoServiceImpl implements GeoService {
         return redisTemplate.opsForGeo().add((Object) geoKey, location);
     }
 
+    /**
+     * 删除地理位置
+     * @param geoKey
+     * @param member
+     * @return
+     */
     @Override
     public Long removeGeo(String geoKey, String member) {
         return redisTemplate.opsForGeo().remove(geoKey, member);
     }
 
+    /**
+     * 搜索指定地理位置的数据
+     * @param geoKey
+     * @param longitude
+     * @param latitude
+     * @param radius
+     * @param unit
+     * @return
+     */
     @Override
     public GeoResults<RedisGeoCommands.GeoLocation<String>> searchGeo(String geoKey, double longitude, double latitude,
                                                                       double radius, String unit) {

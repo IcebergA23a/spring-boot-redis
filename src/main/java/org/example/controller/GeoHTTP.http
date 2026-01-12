@@ -1,3 +1,4 @@
+## 场景： 附近的人
 ### GET request with addGeo
 GET http://localhost:10001/geo/addGeo?geoKey=girl:localtion&longitude=13.361389&latitude=38.115556&member=Alice
 Accept: application/json
