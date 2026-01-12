@@ -1,0 +1,33 @@
+## 场景：网页访问量统计
+### GET request with pfAdd
+GET http://localhost:10001/hyperLogLog/pfAdd?key=live:uv&value=Alice
+Accept: application/json
+
+### GET request with pfAdd
+GET http://localhost:10001/hyperLogLog/pfAdd?key=live:uv&value=Bob
+Accept: application/json
+
+### GET request with pfAdd
+GET http://localhost:10001/hyperLogLog/pfAdd?key=live:uv&value=Eve
+Accept: application/json
+
+### GET request with pfCount  3
+GET http://localhost:10001/hyperLogLog/pfCount?key=live:uv
+Accept: application/json
+
+## 场景：合并多个 HyperLogLog 结构
+### GET request with pfAdd
+GET http://localhost:10001/hyperLogLog/pfAdd?key=unlive:uv&value=Bob
+Accept: application/json
+
+### GET request with pfAdd
+GET http://localhost:10001/hyperLogLog/pfAdd?key=unlive:uv&value=Eve
+Accept: application/json
+
+### GET request with pfAdd
+GET http://localhost:10001/hyperLogLog/pfAdd?key=unlive:uv&value=Frank
+Accept: application/json
+
+### GET request with pfMerge 4
+GET http://localhost:10001/hyperLogLog/pfMerge?destKey=mergelive:uv&sourceKeys=live:uv,unlive:uv
+Accept: application/json
