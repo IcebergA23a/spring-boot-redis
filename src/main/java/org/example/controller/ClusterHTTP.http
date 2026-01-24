@@ -1,0 +1,12 @@
+## 场景：集群连接测试
+### GET request with getKey
+GET http://localhost:10001/cluster/getKey?key=foo
+Accept: application/json
+
+### GET request with getKey
+GET http://localhost:10001/cluster/getKey?key=aa
+Accept: application/json
+
+### GET request with set
+GET http://localhost:10001/cluster/setKey?key=aa&value=aa
+Accept: application/json
